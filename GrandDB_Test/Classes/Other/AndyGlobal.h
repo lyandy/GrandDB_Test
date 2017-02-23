@@ -17,7 +17,7 @@
 #import "AndyDataCenter.h"
 #import "AndyGCD.h"
 #import "AndyCategory.h"
-//#import "AndyExtension.h"
+#import "AndyExtension.h"
 #import "AndyAnimation.h"
 #import "AndyStore.h"
 
@@ -28,7 +28,7 @@
 #import "Masonry.h"
 #import "ReactiveCocoa.h"
 #import "AFNetworking.h"
-#import "MJExtension.h"
+//#import "MJExtension.h"
 #import <YYWebImage/YYWebImage.h>
 
 #import "AndyFavorInfoCacheTool.h"

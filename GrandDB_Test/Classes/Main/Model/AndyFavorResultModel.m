@@ -10,7 +10,7 @@
 
 @implementation AndyFavorResultModel
 
-+ (NSDictionary *)mj_replacedKeyFromPropertyName
++ (NSDictionary *)andy_replacedKeyFromPropertyName
 {
     return @{@"favoredId" : @"id", @"favoredCount" : @"num"};
 }

@@ -64,6 +64,10 @@
 		B6656D071E51C2C2009E26D2 /* AndyUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6656D061E51C2C2009E26D2 /* AndyUserModel.m */; };
 		B6656D091E51C2E2009E26D2 /* test.db in Resources */ = {isa = PBXBuildFile; fileRef = B6656D081E51C2E2009E26D2 /* test.db */; };
 		B6AC0D351E5D99C4009AAF73 /* MBProgressHUD+Andy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC0D341E5D99C4009AAF73 /* MBProgressHUD+Andy.m */; };
+		B6BA3A651E5EBC93006E7983 /* AndyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A641E5EBC93006E7983 /* AndyProperty.m */; };
+		B6BA3A681E5EC6C1006E7983 /* NSObject+AndyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A671E5EC6C1006E7983 /* NSObject+AndyProperty.m */; };
+		B6BA3A6B1E5EC6D1006E7983 /* NSObject+AndyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A6A1E5EC6D1006E7983 /* NSObject+AndyClass.m */; };
+		B6BA3A6E1E5EDC95006E7983 /* AndyExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A6D1E5EDC95006E7983 /* AndyExtensionConst.m */; };
 		B6C873821E52B07700F127A0 /* AndyMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C873811E52B07700F127A0 /* AndyMainTableViewController.m */; };
 		B6C873861E52B09600F127A0 /* AndyMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C873841E52B09600F127A0 /* AndyMainTableViewCell.m */; };
 		B6C873871E52B09600F127A0 /* AndyMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C873851E52B09600F127A0 /* AndyMainTableViewCell.xib */; };
@@ -232,6 +236,14 @@
 		B6656D081E51C2E2009E26D2 /* test.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.db; sourceTree = "<group>"; };
 		B6AC0D331E5D99C4009AAF73 /* MBProgressHUD+Andy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Andy.h"; sourceTree = "<group>"; };
 		B6AC0D341E5D99C4009AAF73 /* MBProgressHUD+Andy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Andy.m"; sourceTree = "<group>"; };
+		B6BA3A631E5EBC93006E7983 /* AndyProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyProperty.h; sourceTree = "<group>"; };
+		B6BA3A641E5EBC93006E7983 /* AndyProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndyProperty.m; sourceTree = "<group>"; };
+		B6BA3A661E5EC6C1006E7983 /* NSObject+AndyProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AndyProperty.h"; sourceTree = "<group>"; };
+		B6BA3A671E5EC6C1006E7983 /* NSObject+AndyProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AndyProperty.m"; sourceTree = "<group>"; };
+		B6BA3A691E5EC6D1006E7983 /* NSObject+AndyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AndyClass.h"; sourceTree = "<group>"; };
+		B6BA3A6A1E5EC6D1006E7983 /* NSObject+AndyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AndyClass.m"; sourceTree = "<group>"; };
+		B6BA3A6C1E5EDC95006E7983 /* AndyExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyExtensionConst.h; sourceTree = "<group>"; };
+		B6BA3A6D1E5EDC95006E7983 /* AndyExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndyExtensionConst.m; sourceTree = "<group>"; };
 		B6C873801E52B07700F127A0 /* AndyMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyMainTableViewController.h; sourceTree = "<group>"; };
 		B6C873811E52B07700F127A0 /* AndyMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndyMainTableViewController.m; sourceTree = "<group>"; };
 		B6C873831E52B09600F127A0 /* AndyMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyMainTableViewCell.h; sourceTree = "<group>"; };
@@ -380,6 +392,14 @@
 				B6280AE61E5A95D1000EECBC /* NSObject+AndyDurex.m */,
 				B6280AE71E5A95D1000EECBC /* NSObject+AndyKeyValue.h */,
 				B6280AE81E5A95D1000EECBC /* NSObject+AndyKeyValue.m */,
+				B6BA3A631E5EBC93006E7983 /* AndyProperty.h */,
+				B6BA3A641E5EBC93006E7983 /* AndyProperty.m */,
+				B6BA3A661E5EC6C1006E7983 /* NSObject+AndyProperty.h */,
+				B6BA3A671E5EC6C1006E7983 /* NSObject+AndyProperty.m */,
+				B6BA3A691E5EC6D1006E7983 /* NSObject+AndyClass.h */,
+				B6BA3A6A1E5EC6D1006E7983 /* NSObject+AndyClass.m */,
+				B6BA3A6C1E5EDC95006E7983 /* AndyExtensionConst.h */,
+				B6BA3A6D1E5EDC95006E7983 /* AndyExtensionConst.m */,
 			);
 			path = AndyExtension;
 			sourceTree = "<group>";
@@ -890,8 +910,10 @@
 				B6C873B41E52B17C00F127A0 /* NSArray+Andy.m in Sources */,
 				B6C873821E52B07700F127A0 /* AndyMainTableViewController.m in Sources */,
 				B6280AF81E5A95D1000EECBC /* UIView+ResetAnimation.m in Sources */,
+				B6BA3A681E5EC6C1006E7983 /* NSObject+AndyProperty.m in Sources */,
 				B6C873BC1E52B17C00F127A0 /* NSTimer+Andy.m in Sources */,
 				B6280AF11E5A95D1000EECBC /* CALayer+ScaleAnimation.m in Sources */,
+				B6BA3A651E5EBC93006E7983 /* AndyProperty.m in Sources */,
 				B6280AF31E5A95D1000EECBC /* UIView+BaseAnimation.m in Sources */,
 				B6656D021E51C2A7009E26D2 /* AndyGCDQueue.m in Sources */,
 				B6280AFB1E5A95D1000EECBC /* UIView+SpecialAnimation.m in Sources */,
@@ -921,6 +943,7 @@
 				B6280B0A1E5A9A92000EECBC /* AndyUserDefaultsStore.m in Sources */,
 				B6C873B81E52B17C00F127A0 /* NSError+Andy.m in Sources */,
 				B6656D031E51C2A7009E26D2 /* AndyGCDSemaphore.m in Sources */,
+				B6BA3A6E1E5EDC95006E7983 /* AndyExtensionConst.m in Sources */,
 				B6656CD31E51BEF2009E26D2 /* AppDelegate.m in Sources */,
 				B6C873C51E52B17C00F127A0 /* UITextField+Andy.m in Sources */,
 				B6280AB21E5A9327000EECBC /* AndyFavorBaseModel.m in Sources */,
@@ -929,6 +952,7 @@
 				B6C873C71E52B17C00F127A0 /* UIViewController+Andy.m in Sources */,
 				B6C873861E52B09600F127A0 /* AndyMainTableViewCell.m in Sources */,
 				B6C873B61E52B17C00F127A0 /* NSDate+Andy.m in Sources */,
+				B6BA3A6B1E5EC6D1006E7983 /* NSObject+AndyClass.m in Sources */,
 				B6280AF91E5A95D1000EECBC /* UIView+RotateAnimation.m in Sources */,
 				B6C873C11E52B17C00F127A0 /* UIDevice+Andy.m in Sources */,
 				B6C873C81E52B17C00F127A0 /* UIWebView+Andy.m in Sources */,

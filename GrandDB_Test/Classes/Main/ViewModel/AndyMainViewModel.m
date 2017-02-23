@@ -35,7 +35,8 @@ SingletonM(MainViewModel);
             
             [manager GET:@"https://ssl.scorplot.com/test3/is_zan.php" parameters:@{@"pids": pids, @"uid" : curUid} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
-                AndyFavorListModel *listModel = [AndyFavorListModel mj_objectWithKeyValues:responseObject];
+                AndyFavorListModel *listModel = [AndyFavorListModel andy_objectWithKeyValues:responseObject];
+                
                 if (listModel.code == AndyFavorCodeSuccess)
                 {
                     NSArray *arr = @[listModel.result, pids];
@@ -92,7 +93,7 @@ SingletonM(MainViewModel);
             
             [manager GET:[NSString stringWithFormat:@"https://ssl.scorplot.com/test3/%@.php", isFavored ? @"unzan" : @"zan"] parameters:@{@"pid": pid, @"uid" : curUid} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
-                AndyFavorModel *favorModel = [AndyFavorModel mj_objectWithKeyValues:responseObject];
+                AndyFavorModel *favorModel = [AndyFavorModel andy_objectWithKeyValues:responseObject];
                 if (favorModel.code == AndyFavorCodeSuccess)
                 {
                     NSArray *arr = @[favorModel.result, pid];
