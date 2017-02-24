@@ -13,6 +13,7 @@
 #import "GYDBRunner.h"
 
 #import "FMDatabaseQueue+Async.h"
+#import "AndyDataCenterConst.h"
 #import "GYDCUtilities.h"
 #import "GYModelObjectProtocol.h"
 #import "GYReflection.h"
@@ -148,7 +149,7 @@ static const double kTransactionTimeInterval = 1;
               joinCondition:(NSString *)joinCondition
                       where:(NSString *)where
                   arguments:(NSArray *)arguments {
-    NSAssert([[leftClass andy_db_dbName] isEqualToString:[rightClass andy_db_dbName]], @"Tables in join sql should come from the same db");
+    AndyDataCenterAssert([[leftClass andy_db_dbName] isEqualToString:[rightClass andy_db_dbName]], @"Tables in join sql should come from the same db");
     
     NSString *columnSql = @"*";
     if (leftProperties.count || rightProperties.count) {
@@ -165,11 +166,11 @@ static const double kTransactionTimeInterval = 1;
             join = @"LEFT OUTER JOIN";
             break;
         case GYSQLJoinTypeCross:
-            NSAssert(joinCondition.length == 0, @"Cross join cannot have join condition");
+            AndyDataCenterAssert(joinCondition.length == 0, @"Cross join cannot have join condition");
             join = @"CROSS JOIN";
             break;
         default:
-            NSAssert(NO, @"Invalid join type");
+            AndyDataCenterAssert(NO, @"Invalid join type");
             break;
     }
     
@@ -233,7 +234,7 @@ static const double kTransactionTimeInterval = 1;
     NSString *tableName = [modelClass andy_db_tableName];
     for (NSUInteger i = 0; i < [properties count]; ++i) {
         NSString *property = [properties objectAtIndex:i];
-        NSAssert([[GYDCUtilities persistentPropertiesForClass:modelClass] containsObject:property], @"Property %@ is not persistent", property);
+        AndyDataCenterAssert([[GYDCUtilities persistentPropertiesForClass:modelClass] containsObject:property], @"Property %@ is not persistent", property);
         NSString *column = [GYDCUtilities columnForClass:modelClass property:property];
         if (i) {
             if (withPrefix) {
@@ -331,7 +332,7 @@ static const double kTransactionTimeInterval = 1;
                 value = [self valueAfterDecodingData:data];
             }
             if (!value) {
-                NSAssert(NO, @"database=%@, table=%@, property=%@", [modelClass andy_db_dbName], [modelClass andy_db_tableName], property);
+                AndyDataCenterAssert(NO, @"database=%@, table=%@, property=%@", [modelClass andy_db_dbName], [modelClass andy_db_tableName], property);
             }
         }
     }
@@ -504,7 +505,7 @@ static const double kTransactionTimeInterval = 1;
 
 - (void)saveObject:(id<GYModelObjectProtocol>)object success:(void (^)())success failure:(void (^)(id error))failure {
     if (!object) {
-        NSAssert(NO, @"object cannot be nil");
+        AndyDataCenterAssert(NO, @"object cannot be nil");
         
         if (failure)
         {
@@ -638,14 +639,14 @@ static const double kTransactionTimeInterval = 1;
         if (!value) {
             return NO;
         }
-        NSAssert([value isKindOfClass:[NSNumber class]], @"Something is wrong");
+        AndyDataCenterAssert([value isKindOfClass:[NSNumber class]], @"Something is wrong");
         if ([((NSNumber *)value) isEqualToNumber:@(0)]) {
             return NO;
         } else {
             return YES;
         }
     } else {
-        NSAssert(value, @"DB Error: Auto increament is supported for interger type only");
+        AndyDataCenterAssert(value, @"DB Error: Auto increament is supported for interger type only");
         return YES;
     }
 }
@@ -672,7 +673,7 @@ static const double kTransactionTimeInterval = 1;
             } else if ([propertyValue conformsToProtocol:@protocol(NSCoding)]) {
                 value = [self dataAfterEncodingObject:propertyValue];
             } else {
-                NSAssert(0, @"DB Error: Don't know how to store property '%@'.", property);
+                AndyDataCenterAssert(0, @"DB Error: Don't know how to store property '%@'.", property);
             }
         }
     }
@@ -753,7 +754,7 @@ static const double kTransactionTimeInterval = 1;
               where:(NSString *)where
           arguments:(NSArray *)arguments success:(void (^)())success failure:(void (^)(id error))failure{
     
-    NSAssert([set count], @"DB Error: Argument 'set' should not be nil.");
+    AndyDataCenterAssert([set count], @"DB Error: Argument 'set' should not be nil.");
     
     if (set.count == 0)
     {
@@ -980,11 +981,11 @@ static const double kTransactionTimeInterval = 1;
     NSArray *columns = [GYDCUtilities allColumnsForClass:modelClass];
     
     if ([self isVirtualTableForClass:modelClass]) {
-        NSAssert([modelClass andy_db_primaryKey] ? existingColumns.count == columns.count - 1 : existingColumns.count == columns.count,
+        AndyDataCenterAssert([modelClass andy_db_primaryKey] ? existingColumns.count == columns.count - 1 : existingColumns.count == columns.count,
                  @"Cannot ALTER virtual table.");
         return;
     } else {
-        NSAssert(existingColumns.count <= columns.count,
+        AndyDataCenterAssert(existingColumns.count <= columns.count,
                  @"DB Error: There are %lu columns existing in table '%@' and %lu columns are expected.",
                  ((unsigned long)[existingColumns count]),
                  [modelClass andy_db_tableName],
@@ -1007,7 +1008,7 @@ static const double kTransactionTimeInterval = 1;
         }
         
         if (![columns containsObject:tmpColumn]) {
-            NSAssert(0, @"DB Error: No mapping for existing column '%@'", existingColumn);
+            AndyDataCenterAssert(0, @"DB Error: No mapping for existing column '%@'", existingColumn);
         }
     }
     
@@ -1189,7 +1190,7 @@ static const double kTransactionTimeInterval = 1;
     GYPropertyType propertyType = [[[modelClass andy_db_propertyTypes] objectForKey:property] unsignedIntegerValue];
     
     if (propertyType == GYPropertyTypeRelationship) {
-        NSAssert(![property isEqualToString:[modelClass andy_db_primaryKey]], @"");
+        AndyDataCenterAssert(![property isEqualToString:[modelClass andy_db_primaryKey]], @"");
         Class<GYModelObjectProtocol> propertyClass = [[modelClass andy_db_propertyClasses] objectForKey:property];
         NSString *primaryKey = [propertyClass andy_db_primaryKey];
         if (primaryKey) {
@@ -1222,7 +1223,7 @@ static const double kTransactionTimeInterval = 1;
             // In SQLite, any column can be set as primary key regardless of its type.
             // However, supporting it for BLOB type incurs complexity and
             // I believe most of us, if not all, will never need such a feature.
-            NSAssert(0, @"DB Error: Property '%@' could not be used as primary key.", property);
+            AndyDataCenterAssert(0, @"DB Error: Property '%@' could not be used as primary key.", property);
         } else {
             definition = [NSMutableString stringWithFormat:@"%@ BLOB", column];
         }
@@ -1232,7 +1233,7 @@ static const double kTransactionTimeInterval = 1;
         NSDictionary *defaultValues = [modelClass andy_db_defaultValues];
         id defaultValue = [defaultValues objectForKey:property];
         if (defaultValue) {
-            NSAssert(![property isEqualToString:[modelClass andy_db_primaryKey]], @"DB Error: Primary key cannot has default value.");
+            AndyDataCenterAssert(![property isEqualToString:[modelClass andy_db_primaryKey]], @"DB Error: Primary key cannot has default value.");
             if ([defaultValue isKindOfClass:[NSString class]]) {
                 [definition appendFormat:@" DEFAULT '%@'", defaultValue];
             } else {
@@ -1250,7 +1251,7 @@ static const double kTransactionTimeInterval = 1;
         return;
     
     if ([self isVirtualTableForClass:modelClass]) {
-        NSAssert([modelClass andy_db_indices].count == 0, @"Cannot create indices for virtual table.");
+        AndyDataCenterAssert([modelClass andy_db_indices].count == 0, @"Cannot create indices for virtual table.");
         return;
     }
     

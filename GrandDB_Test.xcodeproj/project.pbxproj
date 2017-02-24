@@ -68,6 +68,9 @@
 		B6BA3A681E5EC6C1006E7983 /* NSObject+AndyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A671E5EC6C1006E7983 /* NSObject+AndyProperty.m */; };
 		B6BA3A6B1E5EC6D1006E7983 /* NSObject+AndyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A6A1E5EC6D1006E7983 /* NSObject+AndyClass.m */; };
 		B6BA3A6E1E5EDC95006E7983 /* AndyExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A6D1E5EDC95006E7983 /* AndyExtensionConst.m */; };
+		B6BA3A831E5EF5D9006E7983 /* AndyStoreConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A821E5EF5D9006E7983 /* AndyStoreConst.m */; };
+		B6BA3A861E5EF658006E7983 /* AndyGCDConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A851E5EF658006E7983 /* AndyGCDConst.m */; };
+		B6C724B01E5FE96F00304421 /* AndyDataCenterConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C724AF1E5FE96F00304421 /* AndyDataCenterConst.m */; };
 		B6C873821E52B07700F127A0 /* AndyMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C873811E52B07700F127A0 /* AndyMainTableViewController.m */; };
 		B6C873861E52B09600F127A0 /* AndyMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C873841E52B09600F127A0 /* AndyMainTableViewCell.m */; };
 		B6C873871E52B09600F127A0 /* AndyMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C873851E52B09600F127A0 /* AndyMainTableViewCell.xib */; };
@@ -244,6 +247,12 @@
 		B6BA3A6A1E5EC6D1006E7983 /* NSObject+AndyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AndyClass.m"; sourceTree = "<group>"; };
 		B6BA3A6C1E5EDC95006E7983 /* AndyExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyExtensionConst.h; sourceTree = "<group>"; };
 		B6BA3A6D1E5EDC95006E7983 /* AndyExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndyExtensionConst.m; sourceTree = "<group>"; };
+		B6BA3A811E5EF5D9006E7983 /* AndyStoreConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyStoreConst.h; sourceTree = "<group>"; };
+		B6BA3A821E5EF5D9006E7983 /* AndyStoreConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndyStoreConst.m; sourceTree = "<group>"; };
+		B6BA3A841E5EF658006E7983 /* AndyGCDConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyGCDConst.h; sourceTree = "<group>"; };
+		B6BA3A851E5EF658006E7983 /* AndyGCDConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndyGCDConst.m; sourceTree = "<group>"; };
+		B6C724AE1E5FE96F00304421 /* AndyDataCenterConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyDataCenterConst.h; sourceTree = "<group>"; };
+		B6C724AF1E5FE96F00304421 /* AndyDataCenterConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndyDataCenterConst.m; sourceTree = "<group>"; };
 		B6C873801E52B07700F127A0 /* AndyMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyMainTableViewController.h; sourceTree = "<group>"; };
 		B6C873811E52B07700F127A0 /* AndyMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndyMainTableViewController.m; sourceTree = "<group>"; };
 		B6C873831E52B09600F127A0 /* AndyMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyMainTableViewCell.h; sourceTree = "<group>"; };
@@ -407,12 +416,14 @@
 		B6280AFF1E5A9A92000EECBC /* AndyStore */ = {
 			isa = PBXGroup;
 			children = (
+				B6280B051E5A9A92000EECBC /* AndyStore.h */,
+				B6BA3A811E5EF5D9006E7983 /* AndyStoreConst.h */,
+				B6BA3A821E5EF5D9006E7983 /* AndyStoreConst.m */,
 				B6280B001E5A9A92000EECBC /* AndyDictStore.h */,
 				B6280B011E5A9A92000EECBC /* AndyDictStore.m */,
 				B6280B021E5A9A92000EECBC /* AndyJsonStore.h */,
 				B6280B031E5A9A92000EECBC /* AndyJsonStore.m */,
 				B6280B041E5A9A92000EECBC /* AndySingleton.h */,
-				B6280B051E5A9A92000EECBC /* AndyStore.h */,
 				B6280B061E5A9A92000EECBC /* AndyUserDefaultsStore.h */,
 				B6280B071E5A9A92000EECBC /* AndyUserDefaultsStore.m */,
 			);
@@ -583,6 +594,8 @@
 			isa = PBXGroup;
 			children = (
 				B6656CE11E51C2A7009E26D2 /* AndyDataCenter.h */,
+				B6C724AE1E5FE96F00304421 /* AndyDataCenterConst.h */,
+				B6C724AF1E5FE96F00304421 /* AndyDataCenterConst.m */,
 				B6656CE21E51C2A7009E26D2 /* FMDBExtension */,
 				B6656CE51E51C2A7009E26D2 /* GYDataContext.h */,
 				B6656CE61E51C2A7009E26D2 /* GYDataContext.m */,
@@ -620,6 +633,8 @@
 			isa = PBXGroup;
 			children = (
 				B6656CF21E51C2A7009E26D2 /* AndyGCD.h */,
+				B6BA3A841E5EF658006E7983 /* AndyGCDConst.h */,
+				B6BA3A851E5EF658006E7983 /* AndyGCDConst.m */,
 				B6656CF31E51C2A7009E26D2 /* AndyGCDGroup.h */,
 				B6656CF41E51C2A7009E26D2 /* AndyGCDGroup.m */,
 				B6656CF51E51C2A7009E26D2 /* AndyGCDQueue.h */,
@@ -920,6 +935,7 @@
 				B6C873BF1E52B17C00F127A0 /* UIButton+Andy.m in Sources */,
 				B6280AFA1E5A95D1000EECBC /* UIView+ScaleAnimation.m in Sources */,
 				B6280B131E5A9D1D000EECBC /* AndyFavorDBModel.m in Sources */,
+				B6BA3A861E5EF658006E7983 /* AndyGCDConst.m in Sources */,
 				B6280B101E5A9BF1000EECBC /* AndyConst.m in Sources */,
 				B6C873C01E52B17C00F127A0 /* UIColor+Andy.m in Sources */,
 				B6280AF41E5A95D1000EECBC /* UIView+BounceAnimation.m in Sources */,
@@ -937,6 +953,7 @@
 				B6656CFC1E51C2A7009E26D2 /* GYDataContext.m in Sources */,
 				B6656CFE1E51C2A7009E26D2 /* NSObject+DataCenter.m in Sources */,
 				B6C873BE1E52B17C00F127A0 /* UIBarButtonItem+Andy.m in Sources */,
+				B6BA3A831E5EF5D9006E7983 /* AndyStoreConst.m in Sources */,
 				B6656D041E51C2A7009E26D2 /* AndyGCDTimer.m in Sources */,
 				B6280AE91E5A95D1000EECBC /* AndyAnimationConst.m in Sources */,
 				B6280AFE1E5A95D1000EECBC /* NSObject+AndyKeyValue.m in Sources */,
@@ -968,6 +985,7 @@
 				B6280AF21E5A95D1000EECBC /* CALayer+SpecialAnimation.m in Sources */,
 				B6C873B71E52B17C00F127A0 /* NSDictionary+Andy.m in Sources */,
 				B6280B081E5A9A92000EECBC /* AndyDictStore.m in Sources */,
+				B6C724B01E5FE96F00304421 /* AndyDataCenterConst.m in Sources */,
 				B6280B1C1E5AC84C000EECBC /* AndyFavorModel.m in Sources */,
 				B6280AEF1E5A95D1000EECBC /* CALayer+ResetAnimation.m in Sources */,
 				B6C873C41E52B17C00F127A0 /* UILabel+Andy.m in Sources */,
