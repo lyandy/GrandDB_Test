@@ -17,20 +17,20 @@
 /**
  *  类型（属性类型）
  */
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeInt;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeShort;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeFloat;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeDouble;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeLong;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeLongLong;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeChar;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeBOOL1;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeBOOL2;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypePointer;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeInt;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeShort;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeFloat;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeDouble;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeLong;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeLongLong;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeChar;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeBOOL1;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeBOOL2;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypePointer;
 
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeIvar;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeMethod;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeBlock;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeClass;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeSEL;
-ANDYEXTENSION_EXTERN NSString *const MJPropertyTypeId;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeIvar;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeMethod;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeBlock;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeClass;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeSEL;
+ANDYEXTENSION_EXTERN NSString *const AndyPropertyTypeId;

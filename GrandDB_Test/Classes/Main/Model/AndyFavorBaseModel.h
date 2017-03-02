@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, AndyFavorCode) {
-    AndyFavorCodeSuccess = 1,
+    AndyFavorCodeSuccess = (1UL << 0),
     AndyFavorCodeFailure,
     AndyFavorCodeUnknown
 };

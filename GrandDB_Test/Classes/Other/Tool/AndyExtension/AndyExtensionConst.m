@@ -11,20 +11,20 @@
 /**
  *  成员变量类型（属性类型）
  */
-NSString *const MJPropertyTypeInt = @"i";
-NSString *const MJPropertyTypeShort = @"s";
-NSString *const MJPropertyTypeFloat = @"f";
-NSString *const MJPropertyTypeDouble = @"d";
-NSString *const MJPropertyTypeLong = @"l";
-NSString *const MJPropertyTypeLongLong = @"q";
-NSString *const MJPropertyTypeChar = @"c";
-NSString *const MJPropertyTypeBOOL1 = @"c";
-NSString *const MJPropertyTypeBOOL2 = @"b";
-NSString *const MJPropertyTypePointer = @"*";
+NSString *const AndyPropertyTypeInt = @"i";
+NSString *const AndyPropertyTypeShort = @"s";
+NSString *const AndyPropertyTypeFloat = @"f";
+NSString *const AndyPropertyTypeDouble = @"d";
+NSString *const AndyPropertyTypeLong = @"l";
+NSString *const AndyPropertyTypeLongLong = @"q";
+NSString *const AndyPropertyTypeChar = @"c";
+NSString *const AndyPropertyTypeBOOL1 = @"c";
+NSString *const AndyPropertyTypeBOOL2 = @"b";
+NSString *const AndyPropertyTypePointer = @"*";
 
-NSString *const MJPropertyTypeIvar = @"^{objc_ivar=}";
-NSString *const MJPropertyTypeMethod = @"^{objc_method=}";
-NSString *const MJPropertyTypeBlock = @"@?";
-NSString *const MJPropertyTypeClass = @"#";
-NSString *const MJPropertyTypeSEL = @":";
-NSString *const MJPropertyTypeId = @"@";
+NSString *const AndyPropertyTypeIvar = @"^{objc_ivar=}";
+NSString *const AndyPropertyTypeMethod = @"^{objc_method=}";
+NSString *const AndyPropertyTypeBlock = @"@?";
+NSString *const AndyPropertyTypeClass = @"#";
+NSString *const AndyPropertyTypeSEL = @":";
+NSString *const AndyPropertyTypeId = @"@";

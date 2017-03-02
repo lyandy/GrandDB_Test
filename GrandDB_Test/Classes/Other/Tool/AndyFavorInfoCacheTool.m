@@ -64,10 +64,10 @@ SingletonM(FavorInfoCacheTool)
 {
     _itemsCount = itemsCount;
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (_timer == nil)
+    {
         [self getFavorInfoOnline];
-    });
+    }
 }
 
 - (void)getFavorInfoOnline
@@ -77,6 +77,16 @@ SingletonM(FavorInfoCacheTool)
     [self.timer timerExecute:^{
         
         @strongify(self);
+        
+        //如果已经停止滚动，则停止计时器，避免不必要的性能消耗。一定要判断mainRunLoop，不可使用 currentRunLoop
+        if ([NSRunLoop mainRunLoop].currentMode != UITrackingRunLoopMode)
+        {
+            if (_timer != nil)
+            {
+                [_timer destroy];
+                _timer = nil;
+            }
+        }
         
         if ([SPNetworkToolInstance getNetworkStates] != NetworkStatesNone)
         {
@@ -100,8 +110,7 @@ SingletonM(FavorInfoCacheTool)
                 //AndyLog(@"0 个元素不请求");
             }
         }
-        
-    } timeIntervalWithSecs:0.5 delaySecs:0.5];
+    } timeIntervalWithSecs:0.5 delaySecs:0.2];
     
     [self.timer start];
     AndyLog(@"self.timer 启动");
