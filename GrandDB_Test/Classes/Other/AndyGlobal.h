@@ -26,7 +26,7 @@
 
 #import "JPFPSStatus.h"
 #import "Masonry.h"
-#import "ReactiveCocoa.h"
+#import "ReactiveObjC.h"
 #import "AFNetworking.h"
 //#import "MJExtension.h"
 #import <YYWebImage/YYWebImage.h>
